@@ -17,20 +17,20 @@ loginBtn.addEventListener("click", function(){
     console.log(numValue);
     console.log(pinValue);
 
-    if( (numValue === "" || !phoneRegex.test(numValue))) {
+    if( (!phoneRegex.test(numValue))) {
         num = false;
         alert("Please enter a valid phone number.");
         return;
     }
 
-    if( (pinValue === "" || !pinRegex.test(pinValue))) {
+    if( (!pinRegex.test(pinValue))) {
         pin = false;
         alert("Please enter a valid PIN.");
         return;
     }
     
-    if(num && pin) {
-        window.location.href = "home.html";
-    }
-    
+    // If both validations pass, redirect to home.html
+    window.location.assign("./home.html");
+
+
 });
