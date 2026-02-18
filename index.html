@@ -39,19 +39,22 @@
         <fieldset class="fieldset">
             <!-- Mobile Number -->
             <label class="label text-neutral text-[15px] font-medium">Mobile Number</label>
-            <input class="rounded-full h-[46px] p-4 
+            
+            <input id="input-num" class="rounded-full h-[46px] p-4 
                         bg-base-200 text-[#080808] font-light 
                         border-0 text-[14px] mb-3" 
                     maxlength="11" minlength="11" 
                     type="text" class="input" placeholder="Enter your number" />
+            
 
             <!-- Pin -->
             <label class="label text-neutral text-[15px] font-medium">4 Digit Pin</label>
-            <input class="rounded-full h-[46px] p-4 
+            <input id="input-pin" class="rounded-full h-[46px] p-4 
                         bg-base-200 text-[#080808] font-light 
                         border-0 text-[14px]" 
-                type="text" class="input" placeholder="Enter 4 Digit Pin" />
-            <button class="btn btn-neutral mt-4 bg-primary text-white
+                type="password" class="input" placeholder="Enter 4 Digit Pin" />
+                
+            <button id="login-btn" class="btn btn-neutral mt-4 bg-primary text-white
                         rounded-full h-[46px] p-4 
                         font-semibold border-0 text-[18px]">
                     Login</button>
