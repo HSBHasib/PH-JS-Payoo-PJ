@@ -1,17 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payoo | Login</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
 
-    <!-- DaisyUl CDN -->
+    <!-- Daisy CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-        
 
-    <script src="./script.js"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Add font Family -->
+    <style>
+        *{
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen max-w-md mx-auto bg-base-200">
+    <!-- Login Page Code Start Here -->
+    <div class="logo w-[240px] mx-auto pt-36">
+        <img src="./assets/Logo-full.png" alt="Payoo-logo">
+    </div>
+
+    <!-- Login Form -->
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow
+                mx-auto mt-8 rounded-3xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+            <!-- Mobile Number -->
+            <label class="label text-neutral text-[15px] font-medium">Mobile Number</label>
+            <input class="rounded-full h-[46px] p-4 
+                        bg-base-200 text-[#080808] font-light 
+                        border-0 text-[14px] mb-3" 
+                    maxlength="11" minlength="11" 
+                    type="text" class="input" placeholder="Enter your number" />
+
+            <!-- Pin -->
+            <label class="label text-neutral text-[15px] font-medium">4 Digit Pin</label>
+            <input class="rounded-full h-[46px] p-4 
+                        bg-base-200 text-[#080808] font-light 
+                        border-0 text-[14px]" 
+                type="text" class="input" placeholder="Enter 4 Digit Pin" />
+            <button class="btn btn-neutral mt-4 bg-primary text-white
+                        rounded-full h-[46px] p-4 
+                        font-semibold border-0 text-[18px]">
+                    Login</button>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+    <script src="./script/login.js"></script>
 </body>
 </html>
