@@ -2,7 +2,7 @@ let inpNum = document.querySelector("#input-num");
 let inpPin = document.querySelector("#input-pin");
 let loginBtn = document.querySelector("#login-btn");
 
-loginBtn.addEventListener("click", function(){
+function handleLogin() {
     // Regex patterns for phone number and PIN validation
     const phoneRegex = /^(?:\+88|88)?(01[3-9]\d{8})$/;
     const pinRegex = /^\d{4}$/;
@@ -11,26 +11,26 @@ loginBtn.addEventListener("click", function(){
     let numValue = inpNum.value.trim();
     let pinValue = inpPin.value.trim();
 
-    let num = true;
-    let pin = true;
-
-    console.log(numValue);
-    console.log(pinValue);
-
-    if( (!phoneRegex.test(numValue))) {
-        num = false;
+    if (!phoneRegex.test(numValue)) {
         alert("Please enter a valid phone number.");
         return;
     }
 
-    if( (!pinRegex.test(pinValue))) {
-        pin = false;
+    if (!pinRegex.test(pinValue)) {
         alert("Please enter a valid PIN.");
         return;
     }
     
-    // If both validations pass, redirect to home.html
     window.location.assign("./home.html");
+}
+
+loginBtn.addEventListener("click", handleLogin);
 
 
+[inpNum, inpPin].forEach(input => {
+    input.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            handleLogin();
+        }
+    });
 });

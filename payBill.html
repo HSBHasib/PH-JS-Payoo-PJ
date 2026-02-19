@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo | Login</title>
+    <title>Payoo | Pay Bill</title>
     <!-- Logo -->
     <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
 
@@ -56,7 +56,7 @@
     <main>
         <!-- Welcome Payoo Section -->
         <section class="max-[500px]:bg-white rounded-b-3xl">
-            <div class="py-5 space-y-1 w-11/12 mx-auto ">
+            <div class="pt-5 pb-7 space-y-1 w-11/12 mx-auto ">
                 <h2 class="text-[24px] font-semibold">
                     Welcome to Pay<span class="text-primary">oo</span>
                 </h2>
@@ -64,97 +64,78 @@
 
                 <!-- Buttons -->
                 <div class="h-full grid grid-cols-3 gap-4 mt-6">
-                    <button class="btn btn-primary btn-soft flex-col px-5 py-11 rounded-xl">
+                    <button class="btn btn-primary btn-soft flex-col px-2 py-11 rounded-xl">
                         <img src="./assets/opt-1.png" alt="btn-img-1">
                         <p class="text-[13px]">Add Money</p>
                     </button>
 
-                    <button class="btn btn-primary btn-soft flex-col px-5 py-11 rounded-xl">
-                        <img src="./assets/opt-2.png" alt="btn-img-1">
+                    <button class="btn btn-primary btn-soft flex-col px-2 py-11 rounded-xl">
+                        <img src="./assets/opt-2.png" alt="btn-img-2">
                         <p>Cashout</p>
                     </button>
 
-                    <button class="btn btn-primary btn-soft flex-col px-5 py-11 rounded-xl">
-                        <img src="./assets/opt-3.png" alt="btn-img-1">
+                    <button class="btn btn-primary btn-soft flex-col px-2 py-11 rounded-xl">
+                        <img src="./assets/opt-3.png" alt="btn-img-3">
                         <p>Transfer Money</p>
                     </button>
     
-                    <button class="btn btn-primary btn-soft flex-col px-5 py-11 rounded-xl">
-                        <img src="./assets/opt-4.png" alt="btn-img-1">
+                    <button class="btn btn-primary btn-soft flex-col px-2 py-11 rounded-xl">
+                        <img src="./assets/opt-4.png" alt="btn-img-4">
                         <p>Get Bonus</p>
                     </button>
 
-                    <button class="btn btn-primary btn-soft flex-col px-5 py-11 rounded-xl">
-                        <img src="./assets/opt-5.png" alt="btn-img-1">
+                    <button class="btn btn-primary btn-soft flex-col px-2 py-11 rounded-xl">
+                        <img src="./assets/opt-5.png" alt="btn-img-5">
                         <p>Pay Bill</p>
                     </button>
 
-                    <button class="btn btn-primary btn-soft flex-col px-5 py-11 rounded-xl">
-                        <img src="./assets/opt-6.png" alt="btn-img-1">
+                    <button class="btn btn-primary btn-soft flex-col px-2 py-11 rounded-xl">
+                        <img src="./assets/opt-6.png" alt="btn-img-6">
                         <p>Transactions</p>
                     </button>
                 </div>
             </div>    
         </section>
 
-        <!-- Letest Payment | Cashout-->
-       
-        <div class="w-full max-w-sm mx-auto pb-20">
-            <h1 class="text-[18px] font-semibold mb-3">Add Money</h1>
+        <!-- Pay Bill -->
+        <div class="w-full max-w-sm mx-auto pb-20 
+                    max-[500px]:mt-5">
+            <h1 class="text-[18px] font-semibold mb-3">Pay Bill</h1>
             
             <div class="card bg-base-100 shrink-0 shadow
                     rounded-3xl">
             <div class="card-body">
-                <fieldset class="fieldset">
-                    <!-- Bank -->
-                    
-                        <label class="label text-neutral text-[15px] font-medium">Select To Pay</label>
-                        <input id="input-num" class="rounded-full h-[46px] p-4 
-                        bg-base-200 text-[#080808] font-light 
-                        border-0 text-[14px] mb-3" 
-                        type="text" class="input" placeholder="Select back" />
-                    
-                    
+                <form id="paybill-form">
+                    <label class="label text-neutral text-[15px] font-medium">Select To Pay</label>
+                            <select id="pay-bank" class="select select-bordered h-[46px] w-full rounded-full bg-base-200 text-neutral/40 border-0 mb-3">
+                                <option disabled selected>Enter bank name</option>
+                                <option value="bkash">bKash</option>
+                                <option value="nagad">Nagad</option>
+                                <option value="rocket">Rocket</option>
+                                <option value="dbbl">Dutch-Bangla Bank</option>
+                                <option value="islami">Islami Bank</option>
+                                <option value="brac">BRAC Bank</option>
+                                <option value="city">City Bank</option>
+                            </select>
 
-                    <!-- Back Accunt Number -->
-                    
-                        <label class="label text-neutral text-[15px] font-medium">Bank Account Number</label>
-                        <input id="input-pin" class="rounded-full h-[46px] p-4 
-                        bg-base-200 text-[#080808] font-light 
-                        border-0 text-[14px] mb-3" 
-                        maxlength="11" minlength="11" 
-                        type="password" class="input" placeholder="Enter account number" />
-                    
 
-                    <!-- Amount to Add -->
-                        <label class="label text-neutral text-[15px] font-medium">Amount to Pay</label>
-                        <input id="input-num" class="rounded-full h-[46px] p-4 
-                        bg-base-200 text-[#080808] font-light 
-                        border-0 text-[14px] mb-3" 
-                        type="text" class="input" placeholder="Add Amount to pay" />
-                    
+                    <label class="label text-neutral text-[15px] font-medium">Bank Account Number</label>
+                    <input id="pay-account" class="rounded-full h-[46px] w-full p-4 bg-base-200 text-[#080808] font-light border-0 text-[14px] mb-3" type="text" placeholder="Enter account number" />
 
-                    <!-- Pin Number -->
-                    
-                        <label class="label text-neutral text-[15px] font-medium">Pin Number</label>
-                        <input id="input-num" class="rounded-full h-[46px] p-4 
-                        bg-base-200 text-[#080808] font-light 
-                        border-0 text-[14px] mb-3" 
-                        type="text" class="input" placeholder="Enter 4 digit pin number" />
-                    
+                    <label class="label text-neutral text-[15px] font-medium">Amount to Pay</label>
+                    <input id="pay-amount" class="rounded-full h-[46px] w-full p-4 bg-base-200 text-[#080808] font-light border-0 text-[14px] mb-3" type="text" placeholder="Add Amount to pay" />
 
-                    
-                        
-                    <button id="addMoney-btn" class="btn btn-neutral mt-4 bg-primary text-white
-                                rounded-full h-[46px] p-4 
-                                font-semibold border-0 text-[17.5px]">
-                            Pay Now</button>
-                </fieldset>
+                    <label class="label text-neutral text-[15px] font-medium">Pin Number</label>
+                    <input id="pay-pin" class="rounded-full h-[46px] w-full p-4 bg-base-200 text-[#080808] font-light border-0 text-[14px] mb-3" type="password" placeholder="Enter 4 digit pin" />
+
+                    <button id="add-paybill" type="submit" class="btn btn-neutral mt-4 bg-primary text-white rounded-full h-[46px] w-full p-4 font-semibold border-0 text-[17.5px]">Pay Now</button>
+                </form>
             </div>
         </div>
-    </div>
+        </div>
     </main>
 
-    <script src="./script/login.js"></script>
+    <script src="./script/shared.js"></script>
+    <script src="./script/paybill.js"></script>
 </body>
 </html>
