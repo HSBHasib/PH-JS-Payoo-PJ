@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.addEventListener("click", function() {    
             const btnText = btn.textContent.toLowerCase().trim();
 
-            console.log("Navigating to:", btnText);
-
             if (btnText.includes("add money")) {
                 window.location.href = "addmoney.html";
             } 
